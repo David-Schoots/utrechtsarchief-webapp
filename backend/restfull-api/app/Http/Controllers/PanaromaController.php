@@ -9,6 +9,12 @@ class PanaromaController extends Controller
 {
     public function index()
     {
-        return Panorama::all();
+        
+        $panaroma = Panorama::all();
+        return response()->json([
+            'status' => true,
+            'message' => "File found",
+            'data'=> $panaroma
+        ],200);
     }
 }
