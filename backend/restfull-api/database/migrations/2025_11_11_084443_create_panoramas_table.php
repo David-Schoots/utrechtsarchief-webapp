@@ -13,12 +13,20 @@ return new class extends Migration
     {
         Schema::create('panoramas', function (Blueprint $table) {
             $table->id();
-            $table->string("page");
-            $table->text("title");
-            $table->integer("catalog_number")->unique();
-            $table->text("description");
+            $table->integer("page")->nullable();
+            $table->integer("catalog_number")->nullable();
+            $table->string("title");
+            $table->string("description", 2048);
             $table->string("img");
-            $table->text("extra_description");
+            $table->string("extra_description")->nullable();
+            $table->string("extra_description_1", 2048)->nullable();
+            $table->string("extra_description_2", 2048)->nullable();
+            $table->string("extra_description_3", 2048)->nullable();
+            $table->string("extra_description_4", 2048)->nullable();
+            $table->string("extra_img_1")->nullable();
+            $table->string("extra_img_2")->nullable();
+            $table->string("extra_img_3")->nullable();
+            $table->string("extra_img_4")->nullable();
             $table->timestamps();
         });
     }

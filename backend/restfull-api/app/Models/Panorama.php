@@ -13,7 +13,13 @@ class Panorama extends Model
     'catalog_number',
     'description',
     'img',
-    'extra_description',
+    'extra_img_1',
+    'extra_img_2',
+    'extra_img_3',
+    'extra_img_4',
+    'extra_description_1',
+    'extra_description_2',
+    'extra_description_3',
+    'extra_description_4',
 ];
-
 }
