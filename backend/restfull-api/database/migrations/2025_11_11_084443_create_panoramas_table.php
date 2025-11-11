@@ -14,9 +14,11 @@ return new class extends Migration
         Schema::create('panoramas', function (Blueprint $table) {
             $table->id();
             $table->string("page");
-            $table->string("catalog_number")->unique();
-            $table->string("description");
+            $table->text("title");
+            $table->integer("catalog_number")->unique();
+            $table->text("description");
             $table->string("img");
+            $table->text("extra_description");
             $table->timestamps();
         });
     }

@@ -9,9 +9,11 @@ class Panorama extends Model
     //
     protected $fillable = [
     'page',
+    'title',
     'catalog_number',
     'description',
     'img',
+    'extra_description',
 ];
 
 }
