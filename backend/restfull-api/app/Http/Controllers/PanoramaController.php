@@ -26,32 +26,33 @@ class PanoramaController extends Controller
      */
     public function show($id)
     {
-        $panorama = Panorama::find($id);
+        $panoramas = Panorama::find($id);
 
-        if (! $panorama) {
+        if (! $panoramas) {
             return response()->json([
                 'status' => false,
                 'message' => 'Panorama not found',
+                
             ], 404);
         }
 
         return response()->json([
             'status' => true,
-            'data' => $panorama,
+            'data' => $panoramas,
         ], 200);
     }
 
     public function destroy($id)
     {
-        $panorama = Customer::findOrFail($id);
+        $panoramas = Customer::findOrFail($id);
         
-        if(! $panorama){
+        if(! $panoramas){
             return response()->json([
                 'status' => false,
                 'message' => 'Panorama not found with that id',
             ], 404);
         }
-        $panorama->delete();
+        $panoramas->delete();
         
         return response()->json([
             'status' => true,
