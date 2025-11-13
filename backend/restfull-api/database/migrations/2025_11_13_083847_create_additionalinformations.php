@@ -11,12 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('panoramas', function (Blueprint $table) {
+        Schema::create('additionalinformations', function (Blueprint $table) {
             $table->id();
-            $table->integer("catalog_number")->nullable();
             $table->string("title");
+            $table->id("panorama_id");
             $table->text("description");
             $table->string("img");
+            $table->decimal("cordinate_x");
+            $table->decimal("cordinate_y");
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('panoramas');
+        Schema::dropIfExists('additionalinformations');
     }
 };
