@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('additionalinformations', function (Blueprint $table) {
             $table->id();
             $table->string("title");
-            $table->id("panorama_id");
+            $table->integer("panorama_id");
             $table->text("description");
             $table->string("img");
             $table->decimal("cordinate_x");

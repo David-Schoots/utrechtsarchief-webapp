@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('panoramas', function (Blueprint $table) {
             $table->id();
-            $table->integer("catalog_number")->nullable();
+            $table->integer("catalog_number");
+            $table->integer("page_number");
             $table->string("title");
             $table->text("description");
             $table->string("img");
