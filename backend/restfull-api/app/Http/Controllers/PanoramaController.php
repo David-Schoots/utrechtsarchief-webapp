@@ -12,7 +12,7 @@ class PanoramaController extends Controller
      */
     public function index()
     {
-        $panoramas = Panorama::all();
+        $panoramas = Panorama::with('additionalinformations')->get();
 
         return response()->json([
             'status' => true,
@@ -26,7 +26,7 @@ class PanoramaController extends Controller
      */
     public function show($id)
     {
-        $panoramas = Panorama::find($id);
+        $panoramas = Panorama::with('additionalinformations')->find($id);
 
         if (! $panoramas) {
             return response()->json([
@@ -39,6 +39,26 @@ class PanoramaController extends Controller
         return response()->json([
             'status' => true,
             'data' => $panoramas,
+        ], 200);
+    }
+
+    /**
+     * Display the specified panorama with its additional information.
+     */
+    public function showWithAdditional($id)
+    {
+        $panorama = Panorama::with('additionalinformations')->find($id);
+
+        if (! $panorama) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Panorama not found',
+            ], 404);
+        }
+
+        return response()->json([
+            'status' => true,
+            'data' => $panorama,
         ], 200);
     }
 
