@@ -14,8 +14,7 @@ return new class extends Migration
         Schema::create('additionalinformations', function (Blueprint $table) {
             $table->id();
             $table->string("title");
-            // $table->integer("");
-            $table->foreignId('panopanorama_idrama_id')->constrained()->onDelete('cascade');
+            $table->foreignId('panorama_id')->constrained('panoramas')->onDelete('cascade');
             $table->text("description");
             $table->string("img");
             $table->decimal("cordinate_x");
