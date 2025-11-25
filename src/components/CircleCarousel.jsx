@@ -258,9 +258,6 @@ export default function CircleCarousel() {
       if (controlsRef.current) {
         const azimuthAngle = controlsRef.current.getAzimuthalAngle();
         setCarouselRotation(azimuthAngle);
-  
-              setFullscreenPage(pageToShow);
-
       }
     }, 50); 
     
