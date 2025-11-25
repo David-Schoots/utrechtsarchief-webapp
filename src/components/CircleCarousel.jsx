@@ -4,6 +4,7 @@ import { Canvas, useThree } from "@react-three/fiber";
 import { OrbitControls, Html } from "@react-three/drei";
 import { mergeGeometries } from "three/examples/jsm/utils/BufferGeometryUtils.js";
 import pageTestData from "../assets/Json/page_test_information.json";
+import ReadApi from "./ReadApi";
 import { div } from "three/tsl";
 import "./CircleCarousel.css";
 

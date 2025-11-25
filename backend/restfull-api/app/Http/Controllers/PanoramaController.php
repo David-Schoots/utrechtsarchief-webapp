@@ -56,27 +56,37 @@ class PanoramaController extends Controller
             ], 404);
         }
 
+        //loop door panorama data en opbouwen nieuwe array
+        // $ownArray =[];
+        // foreach($panorama as $value){
+        //      $ownArray[] = [
+        //     'page_id' => '',
+        //     'image_url' => '',
+        // ];
+        // }
+       
+
         return response()->json([
-            'status' => true,
-            'data' => $panorama,
+        'status' => true,
+        'data' => $panorama,
         ], 200);
     }
 
-    public function destroy($id)
-    {
-        $panoramas = Customer::findOrFail($id);
-        
-        if(! $panoramas){
-            return response()->json([
-                'status' => false,
-                'message' => 'Panorama not found with that id',
-            ], 404);
-        }
-        $panoramas->delete();
-        
-        return response()->json([
-            'status' => true,
-            'message' => 'panorama deleted successfully'
-        ], 204);
-    }
+public function destroy($id)
+{
+$panoramas = Customer::findOrFail($id);
+
+if(! $panoramas){
+return response()->json([
+'status' => false,
+'message' => 'Panorama not found with that id',
+], 404);
+}
+$panoramas->delete();
+
+return response()->json([
+'status' => true,
+'message' => 'panorama deleted successfully'
+], 204);
+}
 }
