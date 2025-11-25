@@ -1,16 +1,21 @@
 import "./App.css";
-import Carousel3D from "./components/Carousel3D";
-// import "img/top-background.png";
+// import Carousel3D from "./components/Carousel3D";
+import CircleCarousel from './components/CircleCarousel';
+
+
+
 
 function App() {
   return (
-    <div className="App">
+    <div className="App p-0 m-0">
       <div className="background-container">
-        <img src="img/page-13.jpg" alt="Top Background" className="bg-top" />
-        {/* <img src="img/bottom-background.png" alt="Bottom Background" className="bg-bottom" /> */}
+        <img src="img/logo-web.svg" alt="logo Het Utrechts Archief" className="bg-logo"/>        
       </div>
-      <Carousel3D />
-    </div>
+
+    
+      <CircleCarousel />
+    
+     </div> 
   );
 }
 

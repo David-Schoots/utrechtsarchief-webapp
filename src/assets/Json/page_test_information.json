@@ -1,0 +1,611 @@
+{
+    "pages": [
+        {
+        "page_id": "1",
+        "main_image_url": "/img/page-1.jpg",
+        "main_title": "Title for Page 1",
+        "main_description": "Description for Page 1",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ]
+        },
+        {
+        "page_id": "2",
+        "main_image_url": "/img/page-2.jpg",
+        "main_title": "Title for Page 2",
+        "main_description": "Description for Page 2",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ]
+        },
+        {
+        "page_id": "3",
+        "main_image_url": "/img/page-3.jpg",
+        "main_title": "Title for Page 3",
+        "main_description": "Description for Page 3",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ]
+        },
+        {
+        "page_id": "4",
+        "main_image_url": "/img/page-4.jpg",
+        "main_title": "Title for Page 4",
+        "main_description": "Description for Page 4",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ],
+        "additional_info": [
+            {
+            "title": "Additional Info Title 1 for Page 2",
+            "image_url": "/img/page-4-1.jpg",
+            "description": "Additional Info Description 1 for Page 2",
+            "additional_info_button": [
+                {
+                "x_cordinate": 0.84,
+                "y_cordinate": -0.23
+                }
+            ]
+            }
+        ]
+        },
+        {
+        "page_id": "5",
+        "main_image_url": "/img/page-5.jpg",
+        "main_title": "Title for Page 5",
+        "main_description": "Description for Page 5",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ]
+        },
+        {
+        "page_id": "6",
+        "main_image_url": "/img/page-6.jpg",
+        "main_title": "Title for Page 6",
+        "main_description": "Description for Page 6",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ]
+        },
+        {
+        "page_id": "7",
+        "main_image_url": "/img/page-7.jpg",
+        "main_title": "Title for Page 7",
+        "main_description": "Description for Page 7",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ]
+        },
+        {
+        "page_id": "8",
+        "main_image_url": "/img/page-8.jpg",
+        "main_title": "Title for Page 8",
+        "main_description": "Description for Page 8",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ],
+        "additional_info": [
+            {
+            "title": "Additional Info Title 1 for Page 8",
+            "image_url": "/img/page-8-1.jpg",
+            "description": "Additional Info Description 1 for Page 8",
+            "additional_info_button": [
+                {
+                "x_cordinate": 0.55,
+                "y_cordinate": -0.11
+                }
+            ]
+            }
+        ]
+        },
+        {
+        "page_id": "9",
+        "main_image_url": "/img/page-9.jpg",
+        "main_title": "Title for Page 9",
+        "main_description": "Description for Page 9",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ]
+        },
+        {
+        "page_id": "10",
+        "main_image_url": "/img/page-10.jpg",
+        "main_title": "Title for Page 10",
+        "main_description": "Description for Page 10",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ],
+        "additional_info": [
+            {
+            "title": "Additional Info Title 1 for Page 10",
+            "image_url": "/img/page-10-1.jpg",
+            "description": "Additional Info Description 1 for Page 10",
+            "additional_info_button": [
+                {
+                "x_cordinate": 0.46,
+                "y_cordinate": -0.17
+                }
+            ]
+            },
+            {
+            "title": "Additional Info Title 2 for Page 10",
+            "image_url": "/img/page-10-2.jpg",
+            "description": "Additional Info Description 2 for Page 10",
+            "additional_info_button": [
+                {
+                "x_cordinate": 0.07,
+                "y_cordinate": -0.17
+                }
+            ]
+            },
+            {
+            "title": "Additional Info Title 3 for Page 10",
+            "image_url": "/img/page-10-3.jpg",
+            "description": "Additional Info Description 3 for Page 10",
+            "additional_info_button": [
+                {
+                "x_cordinate": 0.8,
+                "y_cordinate": -0.25
+                }
+            ]
+            },
+            {
+            "title": "Additional Info Title 4 for Page 10",
+            "image_url": "/img/page-10-4.jpg",
+            "description": "Additional Info Description 4 for Page 10",
+            "additional_info_button": [
+                {
+                "x_cordinate": 0.33,
+                "y_cordinate": -0.22
+                }
+            ]
+            }
+        ]
+        },
+        {
+        "page_id": "11",
+        "main_image_url": "/img/page-11.jpg",
+        "main_title": "Title for Page 11",
+        "main_description": "Description for Page 11",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ],
+        "additional_info": [
+            {
+            "title": "Additional Info Title 1 for Page 11",
+            "image_url": "/img/page-11-1.jpg",
+            "description": "Additional Info Description 1 for Page 11",
+            "additional_info_button": [
+                {
+                "x_cordinate": 0.06,
+                "y_cordinate": -0.02
+                }
+            ]
+            }
+        ]
+        },
+        {
+        "page_id": "12",
+        "main_image_url": "/img/page-12.jpg",
+        "main_title": "Title for Page 12",
+        "main_description": "Description for Page 12",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ],
+        "additional_info": [
+            {
+            "title": "Additional Info Title 1 for Page 12",
+            "image_url": "/img/page-12-1.jpg",
+            "description": "Additional Info Description 1 for Page 12",
+            "additional_info_button": [
+                {
+                "x_cordinate": 0.95,
+                "y_cordinate": -0.35
+                }
+            ]
+            },
+            {
+            "title": "Additional Info Title 2 for Page 12",
+            "image_url": "/img/page-12-2.jpg",
+            "description": "Additional Info Description 2 for Page 12",
+            "additional_info_button": [
+                {
+                "x_cordinate": 0.67,
+                "y_cordinate": -0.40
+                }
+            ]
+            }
+        ]
+        },
+        {
+        "page_id": "13",
+        "main_image_url": "/img/page-13.jpg",
+        "main_title": "Title for Page 13",
+        "main_description": "Description for Page 13",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ],
+        "additional_info": [
+            {
+            "title": "Additional Info Title 1 for Page 13",
+            "image_url": "/img/page-13-1.jpg",
+            "description": "Additional Info Description 1 for Page 13",
+            "additional_info_button": [
+                {
+                "x_cordinate": 0.1,
+                "y_cordinate": -0.20
+                }
+            ]
+            }
+        ]
+        },
+        {
+        "page_id": "14",
+        "main_image_url": "/img/page-14.jpg",
+        "main_title": "Title for Page 14",
+        "main_description": "Description for Page 14",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ],
+        "additional_info": [
+            {
+            "title": "Additional Info Title 1 for Page 14",
+            "image_url": "/img/page-14-1.jpg",
+            "description": "Additional Info Description 1 for Page 14",
+            "additional_info_button": [
+                {
+                "x_cordinate": 0.48,
+                "y_cordinate": 0.07
+                }
+            ]
+            }
+        ]
+        },
+        {
+        "page_id": "15",
+        "main_image_url": "/img/page-15.jpg",
+        "main_title": "Title for Page 15",
+        "main_description": "Description for Page 15",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ]
+        },
+        {
+        "page_id": "16",
+        "main_image_url": "/img/page-16.jpg",
+        "main_title": "Title for Page 16",
+        "main_description": "Description for Page 16",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ]
+        },
+        {
+        "page_id": "17",
+        "main_image_url": "/img/page-17.jpg",
+        "main_title": "Title for Page 17",
+        "main_description": "Description for Page 17",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ]
+        },
+        {
+        "page_id": "18",
+        "main_image_url": "/img/page-18.jpg",
+        "main_title": "Title for Page 18",
+        "main_description": "Description for Page 18",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ]
+        },
+        {
+        "page_id": "19",
+        "main_image_url": "/img/page-19.jpg",
+        "main_title": "Title for Page 19",
+        "main_description": "Description for Page 19",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ]
+        },
+        {
+        "page_id": "20",
+        "main_image_url": "/img/page-20.jpg",
+        "main_title": "Title for Page 20",
+        "main_description": "Description for Page 20",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ]
+        },
+        {
+        "page_id": "21",
+        "main_image_url": "/img/page-21.jpg",
+        "main_title": "Title for Page 21",
+        "main_description": "Description for Page 21",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ]
+        },
+        {
+        "page_id": "22",
+        "main_image_url": "/img/page-22.jpg",
+        "main_title": "Title for Page 22",
+        "main_description": "Description for Page 22",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ]
+        },
+        {
+        "page_id": "23",
+        "main_image_url": "/img/page-23.jpg",
+        "main_title": "Title for Page 23",
+        "main_description": "Description for Page 23",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ],
+        "additional_info": [
+            {
+            "title": "Additional Info Title 1 for Page 23",
+            "image_url": "/img/page-23-1.jpg",
+            "description": "Additional Info Description 1 for Page 23",
+            "additional_info_button": [
+                {
+                "x_cordinate": 0.4,
+                "y_cordinate": 0.2
+                }
+            ]
+            },
+            {
+            "title": "Additional Info Title 2 for Page 23",
+            "image_url": "/img/page-23-2.jpg",
+            "description": "Additional Info Description 2 for Page 23",
+            "additional_info_button": [
+                {
+                "x_cordinate": 0.8,
+                "y_cordinate": 0.05
+                }
+            ]
+            }
+        ]
+        },
+        {
+        "page_id": "24",
+        "main_image_url": "/img/page-24.jpg",
+        "main_title": "Title for Page 24",
+        "main_description": "Description for Page 24",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ],
+        "additional_info": [
+            {
+            "title": "Additional Info Title 1 for Page 24",
+            "image_url": "/img/page-24-1.jpg",
+            "description": "Additional Info Description 1 for Page 24",
+            "additional_info_button": [
+                {
+                "x_cordinate": 0.92,
+                "y_cordinate": 0.1
+                }
+            ]
+            }
+        ]
+        },
+        {
+        "page_id": "25",
+        "main_image_url": "/img/page-25.jpg",
+        "main_title": "Title for Page 25",
+        "main_description": "Description for Page 25",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ]
+        },
+        {
+        "page_id": "26",
+        "main_image_url": "/img/page-26.jpg",
+        "main_title": "Title for Page 26",
+        "main_description": "Description for Page 26",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ],
+        "additional_info": [
+            {
+            "title": "Additional Info Title 1 for Page 26",
+            "image_url": "/img/page-26-1.jpg",
+            "description": "Additional Info Description 1 for Page 26",
+            "additional_info_button": [
+                {
+                "x_cordinate": 0.78,
+                "y_cordinate": -0.40
+                }
+            ]
+            }
+        ]
+        },
+        {
+        "page_id": "27",
+        "main_image_url": "/img/page-27.jpg",
+        "main_title": "Title for Page 27",
+        "main_description": "Description for Page 27",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ]
+        },
+        {
+        "page_id": "28",
+        "main_image_url": "/img/page-28.jpg",
+        "main_title": "Title for Page 28",
+        "main_description": "Description for Page 28",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ]
+        },
+        {
+        "page_id": "29",
+        "main_image_url": "/img/page-29.jpg",
+        "main_title": "Title for Page 29",
+        "main_description": "Description for Page 29",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ]
+        },
+        {
+        "page_id": "30",
+        "main_image_url": "/img/page-30.jpg",
+        "main_title": "Title for Page 30",
+        "main_description": "Description for Page 30",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ]
+        },
+        {
+        "page_id": "31",
+        "main_image_url": "/img/page-31.jpg",
+        "main_title": "Title for Page 31",
+        "main_description": "Description for Page 31",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ],
+        "additional_info": [
+            {
+            "title": "Additional Info Title 1 for Page 31",
+            "image_url": "/img/page-31-1.jpg",
+            "description": "Additional Info Description 1 for Page 31",
+            "additional_info_button": [
+                {
+                "x_cordinate": 0.38,
+                "y_cordinate": -0.26
+                }
+            ]
+            }
+        ]
+        },
+        {
+        "page_id": "32",
+        "main_image_url": "/img/page-32.jpg",
+        "main_title": "Title for Page 32",
+        "main_description": "Description for Page 32",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ],
+        "additional_info": [
+            {
+            "title": "Additional Info Title 1 for Page 32",
+            "image_url": "/img/page-32-1.jpg",
+            "description": "Additional Info Description 1 for Page 32",
+            "additional_info_button": [
+                {
+                "x_cordinate": 0.29,
+                "y_cordinate": 0.05
+                }
+            ]
+            }
+        ]
+        },
+        {
+        "page_id": "33",
+        "main_image_url": "/img/page-33.jpg",
+        "main_title": "Title for Page 33",
+        "main_description": "Description for Page 33",
+        "main_info_button": [
+            {
+            "x_cordinate": 0.03,
+            "y_cordinate": -0.57
+            }
+        ]
+        }
+    ]
+}
