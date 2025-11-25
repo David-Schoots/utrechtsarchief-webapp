@@ -1,10 +1,15 @@
-import AppRouter from "./router";
-import { CmsDataProvider } from "./cms/CmsDataContext";
+import "./App.css";
+import Carousel3D from "./components/Carousel3D";
+// import "img/top-background.png";
 
-export default function App() {
+function App() {
   return (
-    <CmsDataProvider>
-      <AppRouter />
-    </CmsDataProvider>
+    <div className="App">
+      <div className="background-container">
+        <img src="img/page-13.jpg" alt="Top Background" className="bg-top" />
+        {/* <img src="img/bottom-background.png" alt="Bottom Background" className="bg-bottom" /> */}
+      </div>
+      <Carousel3D />
+    </div>
   );
 }
