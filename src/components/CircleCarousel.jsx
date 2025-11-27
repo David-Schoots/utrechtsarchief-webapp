@@ -302,7 +302,7 @@ export default function CircleCarousel() {
   const targetRotationRef = useRef(null);
 
   const [textForSpeech, setTextForSpeech] = useState(null);
-  
+  const speechSynth = window.speechSynthesis;
 
   const handlePageClick = (page) => {
     setFullscreenPage(page);
@@ -315,30 +315,29 @@ export default function CircleCarousel() {
   };
 
   const textToSpeech = (text) => {
-    const speechSynth = window.speechSynthesis;
-    let voices = speechSynth.getVoices();
-    console.log(voices);
-
-    if(speechSynth.onvoiceschanged){
-      speechSynth.onvoiceschanged = () => {
-        voices = speechSynth.getVoices();
-        console.log(voices);
-      };
-    }
-    const selectedVoice = voices.find(voice => voice.name === 'Microsoft Frank - Dutch (Netherlands)');
     setTextForSpeech(text);
+    let voices = speechSynth.getVoices();
 
-    if (!speechSynth.speaking && textForSpeech.trim().length > 0) {
+    const selectedVoice = voices.find(voice => voice.name === 'Google Nederlands');
+
       const newUtter =
-            new SpeechSynthesisUtterance(textForSpeech);
+      new SpeechSynthesisUtterance(textForSpeech);
       newUtter.voice = selectedVoice;
       newUtter.lang = 'nl-NL';
       newUtter.pitch = 1;
-      newUtter.rate = 1.3;
+      newUtter.rate = 0.95;
       newUtter.volume = 1;
-        speechSynth.speak(newUtter);
-      
+
+    if (speechSynth.speaking) {
+      speechSynth.cancel();
+      return;
     }
+
+    if (!speechSynth.speaking) {
+      speechSynth.speak(newUtter);
+    }
+
+    
   };
 
   useEffect(() => {
