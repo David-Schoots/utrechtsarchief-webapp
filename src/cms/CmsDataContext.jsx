@@ -12,18 +12,21 @@ const INITIAL_ITEMS = [
     title: "Welkom bij ons platform",
     desc: "Ontdek de nieuwste functionaliteiten en mogelijkheden van ons platform.",
     img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=640",
+    additionalInfo: [],
   },
   {
     id: "2",
     title: "Onze diensten",
     desc: "Wij bieden een breed scala aan diensten voor al uw behoeften.",
     img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=640",
+    additionalInfo: [],
   },
   {
     id: "3",
     title: "Contact opnemen",
     desc: "Neem contact met ons op voor meer informatie of vragen.",
     img: "https://images.unsplash.com/photo-1581291519195-ef11498d1cf5?w=640",
+    additionalInfo: [],
   },
 ];
 

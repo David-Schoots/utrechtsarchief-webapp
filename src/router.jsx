@@ -1,14 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CmsPage from "./cms/cmspage";
+import App from "./App";
+import CmsPage from "./cms/CmsPage";
 import CmsEdit from "./cms/CmsEdit";
+import { CmsDataProvider } from "./cms/CmsDataContext";
 
 export default function Router() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/cms" element={<CmsPage />} />
-        <Route path="/cms/edit/:id" element={<CmsEdit />} />
-      </Routes>
-    </BrowserRouter>
+    <CmsDataProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/cms" element={<CmsPage />} />
+          <Route path="/cms/edit/:id" element={<CmsEdit />} />
+        </Routes>
+      </BrowserRouter>
+    </CmsDataProvider>
   );
 }

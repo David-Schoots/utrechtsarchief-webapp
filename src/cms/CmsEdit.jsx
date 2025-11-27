@@ -17,20 +17,50 @@ export default function CmsEdit() {
         title: `Item ${id ?? ""}`.trim(),
         desc: "Voeg hier een beschrijving toe.",
         img: "",
+        additionalInfo: [],
       },
-    [item, id],
+    [item, id]
   );
 
   const [title, setTitle] = useState(defaults.title);
   const [desc, setDesc] = useState(defaults.desc);
   const [image, setImage] = useState(defaults.img);
+  const [additionalInfos, setAdditionalInfos] = useState(
+    defaults.additionalInfo || []
+  );
+  const [newInfo, setNewInfo] = useState({
+    title: "",
+    desc: "",
+    url: "",
+  });
   const previewImage = image || defaults.img;
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    updateItem(defaults.id, { title, desc, img: image });
+    updateItem(defaults.id, {
+      title,
+      desc,
+      img: image,
+      additionalInfo: additionalInfos,
+    });
     alert("Wijzigingen opgeslagen!");
     navigate("/cms");
+  };
+
+  const addAdditionalInfo = () => {
+    if (!newInfo.title && !newInfo.desc && !newInfo.url) return;
+    setAdditionalInfos((prev) => [...prev, newInfo]);
+    setNewInfo({ title: "", desc: "", url: "" });
+  };
+
+  const removeAdditionalInfo = (index) => {
+    setAdditionalInfos((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  const updateExistingInfo = (index, key, value) => {
+    setAdditionalInfos((prev) =>
+      prev.map((info, i) => (i === index ? { ...info, [key]: value } : info))
+    );
   };
 
   return (
@@ -95,6 +125,79 @@ export default function CmsEdit() {
                 Voeg een afbeelding toe om het voorbeeld te zien.
               </p>
             )}
+          </div>
+
+          <div className="cms-field">
+            <span className="cms-field__label">Aanvullende info toevoegen</span>
+            <div className="cms-additional">
+              <input
+                type="text"
+                className="cms-input"
+                placeholder="Titel"
+                value={newInfo.title}
+                onChange={(e) =>
+                  setNewInfo((prev) => ({ ...prev, title: e.target.value }))
+                }
+              />
+              <textarea
+                className="cms-input cms-input--textarea"
+                placeholder="Beschrijving"
+                value={newInfo.desc}
+                onChange={(e) =>
+                  setNewInfo((prev) => ({ ...prev, desc: e.target.value }))
+                }
+              />
+
+              <div className="cms-form-actions">
+                <button
+                  type="button"
+                  className="cms-btn cms-btn--primary"
+                  onClick={addAdditionalInfo}
+                >
+                  Aanvullende info opslaan
+                </button>
+              </div>
+            </div>
+
+            {additionalInfos.length > 0 ? (
+              <div className="cms-additional-list">
+                {additionalInfos.map((info, index) => (
+                  <div key={index} className="cms-additional-item">
+                    <div className="cms-field">
+                      <span className="cms-field__label">Titel</span>
+                      <input
+                        type="text"
+                        className="cms-input"
+                        value={info.title}
+                        onChange={(e) =>
+                          updateExistingInfo(index, "title", e.target.value)
+                        }
+                      />
+                    </div>
+                    <div className="cms-field">
+                      <span className="cms-field__label">Beschrijving</span>
+                      <textarea
+                        className="cms-input cms-input--textarea"
+                        value={info.desc}
+                        onChange={(e) =>
+                          updateExistingInfo(index, "desc", e.target.value)
+                        }
+                      />
+                    </div>
+                    <div className="cms-field"></div>
+                    <div className="cms-form-actions">
+                      <button
+                        type="button"
+                        className="cms-btn cms-btn--ghost"
+                        onClick={() => removeAdditionalInfo(index)}
+                      >
+                        Verwijderen
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : null}
           </div>
 
           <div className="cms-form-actions">
