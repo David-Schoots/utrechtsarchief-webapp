@@ -1,25 +1,35 @@
 import { useState, useEffect } from "react";
 
 const useReadApi = () => {
-  const [posts, setPosts] = useState([]); // To store the API data
-  const [loading, setLoading] = useState(true); // To track the loading state
-  const [error, setError] = useState(null); // To handle any errors
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Fetch data from the API
-    fetch("http://127.0.0.1:8000/api/panorama/")
-      .then((response) => response.json())
+    const token = localStorage.getItem("token"); // Haal token uit storage
+
+    fetch("http://127.0.0.1:8000/api/panorama/", {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        if (!response.ok) throw new Error("Network response was not ok");
+        return response.json();
+      })
       .then((data) => {
-        setPosts(data); // Set data to state
-        setLoading(false); // Set loading to false once data is fetched
+        setPosts(data.pages);
+        setLoading(false);
+        setPosts(data.pages);
       })
       .catch((err) => {
-        setError(err.message); // Set error if something goes wrong
-        setLoading(false); // Set loading to false even on error
+        setError(err.message);
+        setLoading(false);
       });
-  }, []); // Empty dependency array, meaning it runs only once when the component mounts
+  }, []);
 
-  return { posts, loading, error }; // Return data, loading state, and error
+  return { posts, loading, error };
 };
 
 export default useReadApi;
