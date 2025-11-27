@@ -17,7 +17,7 @@ class PanoramaController extends Controller
         return response()->json([
             'status' => true,
             'message' => 'Files found',
-            'data' => $panoramas,
+            'pages' => $panoramas,
         ], 200);
     }
 

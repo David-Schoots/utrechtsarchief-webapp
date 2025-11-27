@@ -34,7 +34,7 @@ Herfkens en zoon.',
         'title' => 'Titel 2',
         'description' => 'Gezicht over de Wittevrouwenbrug in de Wittevrouwenstraat te Utrecht met het
 douanekantoor (de latere politiepost Wittevrouwen) en de Willemskazerne.',
-        'img' => '/img/page-2.png',
+        'img' => '/img/page-2.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -44,7 +44,7 @@ douanekantoor (de latere politiepost Wittevrouwen) en de Willemskazerne.',
         'title' => 'Titel 3',
         'description' => 'Gezicht op de gevangenis aan het Wolvenplein te Utrecht op het vroegere bolwerk
 Wolvenburg, met rechts een huis op de afgegraven stadswal bij de Wolvenstraat.',
-        'img' => '/img/page-3.png',
+        'img' => '/img/page-3.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -56,7 +56,7 @@ Wolvenburg, met rechts een huis op de afgegraven stadswal bij de Wolvenstraat.',
 stadsbuitengracht, in het midden de bomen langs de Noorderkade en rechts een gedeelte van
 het Begijnebolwerk. Rechts wordt een overhaalschuitje voortgetrokken.
 ',
-        'img' => '/img/page-4.png',
+        'img' => '/img/page-4.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -65,7 +65,7 @@ het Begijnebolwerk. Rechts wordt een overhaalschuitje voortgetrokken.
         'page_number' => 5,
         'title' => 'Titel 5',
         'description' => 'Gezicht op het Begijnebolwerk te Utrecht.',
-        'img' => '/img/page-5.png',
+        'img' => '/img/page-5.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -75,7 +75,7 @@ het Begijnebolwerk. Rechts wordt een overhaalschuitje voortgetrokken.
         'title' => 'Titel 6',
         'description' => 'Gezicht op een gedeelte van het Begijnebolwerk (links) en de Van Asch van
 Wijckskade te Utrecht.',
-        'img' => '/img/page-6.png',
+        'img' => '/img/page-6.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -85,7 +85,7 @@ Wijckskade te Utrecht.',
         'title' => 'Titel 7',
         'description' => 'Gezicht op de Van Asch van Wijckskade te Utrecht, de Weerdbarrière en de
 Weerdbrug en rechts de Noorderkade met de stadswaag en stadskraan.',
-        'img' => '/img/page-7.png',
+        'img' => '/img/page-7.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -96,7 +96,7 @@ Weerdbrug en rechts de Noorderkade met de stadswaag en stadskraan.',
         'description' => 'Gezicht op de Noorderkade te Utrecht, de Koninklijke Fabriek van
 Landbouwkundige Werktuigen, bierbrouwerij De Krans en het Paardenveld met de molen De Rijn
 en Zon',
-        'img' => '/img/page-8.png',
+        'img' => '/img/page-8.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -106,7 +106,7 @@ en Zon',
         'title' => 'Titel 9',
         'description' => 'Gezicht op het Paardenveld te Utrecht met de molen De Meiboom en rechts een
 was- en badhuis, de latere Wasch- en Badinrichting van W. de Rijk.',
-        'img' => '/img/page-9.png',
+        'img' => '/img/page-9.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -119,7 +119,7 @@ was- en badhuis, de latere Wasch- en Badinrichting van W. de Rijk.',
 douanekantoortje (de Catharijnebarrière), een herenhuis (later Bierhuis De Hoop) en de
 gasfabriek van W.H. de Heus op en bij het noordwestelijke bastion van het vroegere kasteel
 Vredenburg.',
-        'img' => '/img/page-10.png',
+        'img' => '/img/page-10.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -130,7 +130,7 @@ Vredenburg.',
         'title' => 'Titel 11',
         'description' => 'Gezicht op de koperpletterij van W.H. de Heus met het zuidwestelijke bastion van
 het vroegere kasteel Vredenburg en rechts de Rijnkade te Utrecht.',
-        'img' => '/img/page-11.png',
+        'img' => '/img/page-11.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -143,7 +143,7 @@ het vroegere kasteel Vredenburg en rechts de Rijnkade te Utrecht.',
 douanekantoortjes aan weerszijden van de brug (de Willemsbarrière) en rechts van de brug het
 begin van het in Engelse landschapsstijl aangelegde singelplantsoen.
 ',
-        'img' => '/img/page-12.png',
+        'img' => '/img/page-12.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -156,7 +156,7 @@ begin van het in Engelse landschapsstijl aangelegde singelplantsoen.
 met het theehuis van de oud-rooms-katholieke aartsbisschop en rechts het hospitaal van het
 Duitse Huis. Het kruis boven het langgerekte rode dak is van de Dominicuskerk op de
 Mariaplaats.',
-        'img' => '/img/page-13.png',
+        'img' => '/img/page-13.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -169,7 +169,7 @@ Mariaplaats.',
 ter hoogte van de Zeven Steegjes. De opzet van het plan Zocher was om de minder
 aantrekkelijke delen van de stad te camoufleren. Dat doet hij hier door middel van een
 plantsoen.',
-        'img' => '/img/page-14.png',
+        'img' => '/img/page-14.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -179,7 +179,7 @@ plantsoen.',
         'page_number' => 15,
         'title' => 'Titel 15',
         'description' => 'Gezicht op het singelplantsoen te Utrecht met het Bartholomeusgasthuis',
-        'img' => '/img/page-15.png',
+        'img' => '/img/page-15.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -190,7 +190,7 @@ plantsoen.',
         'title' => 'Titel 16',
         'description' => 'Gezicht op het singelplantsoen te Utrecht met links de Geertekerk en in de
 stadsbuitengracht een houtvlot.',
-        'img' => '/img/page-16.png',
+        'img' => '/img/page-16.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -202,7 +202,7 @@ stadsbuitengracht een houtvlot.',
         'description' => 'Gezicht op het singelplantsoen te Utrecht met half achter de bomen het
 Diakonessenhuis aan de Springweg en rechts een gedeelte van het vroegere bastion Sterrenburg
 met daarachter de molen op de Bijlhouwerstoren en in de stadsbuitengracht een houtvlot.',
-        'img' => '/img/page-17.png',
+        'img' => '/img/page-17.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -213,7 +213,7 @@ met daarachter de molen op de Bijlhouwerstoren en in de stadsbuitengracht een ho
         'title' => 'Titel 18',
         'description' => 'Gezicht op het singelplantsoen te Utrecht met het dubbele woonhuis boven de
 kazematten van het vroegere bastion Sterrenburg en de molen op de Bijlhouwerstoren.',
-        'img' => '/img/page-18.png',
+        'img' => '/img/page-18.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -225,7 +225,7 @@ kazematten van het vroegere bastion Sterrenburg en de molen op de Bijlhouwerstor
         'description' => 'Gezicht over de Tolsteegbrug te Utrecht op de hekpalen van de Tolsteegbarrière bij
 het Ledig Erf met daaronder de uitmonding van de Oudegracht in de stadsbuitengracht en rechts
 het in het singelplantsoen opgenomen vroegere bastion Manenburg.',
-        'img' => '/img/page-19.png',
+        'img' => '/img/page-19.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -236,7 +236,7 @@ het in het singelplantsoen opgenomen vroegere bastion Manenburg.',
         'description' => 'Gezicht op het singelplantsoen te Utrecht met de zuidwestelijke toren van de
 Nicolaikerk en de cavaleriestallen met daarachter een gebouw van het voormalige St.-
 Agnietenklooster. Tegenwoordig ziet hier het Centraal Museum.',
-        'img' => '/img/page-20.png',
+        'img' => '/img/page-20.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -246,7 +246,7 @@ Agnietenklooster. Tegenwoordig ziet hier het Centraal Museum.',
         'title' => 'Titel 21',
         'description' => 'Gezicht op het singelplantsoen te Utrecht met het gebouw van de Fundatie van de
 Vrijvrouwe van Renswoude en rechts de kameren van Maria van Pallaes aan de Agnietenstraat.',
-        'img' => '/img/page-21.png',
+        'img' => '/img/page-21.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -257,7 +257,7 @@ Vrijvrouwe van Renswoude en rechts de kameren van Maria van Pallaes aan de Agnie
         'description' => ' Gezicht op het singelplantsoen te Utrecht met geheel links de regentenkamer van
 de kameren van Maria van Pallaes en daarnaast de Nieuwegracht Onder de Linden en de
 uitmonding van de Nieuwegracht in de stadsbuitengracht en rechts de rode daken van gebouwen van de voormalige St.-Servaasabdij',
-        'img' => '/img/page-22.png',
+        'img' => '/img/page-22.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -268,7 +268,7 @@ uitmonding van de Nieuwegracht in de stadsbuitengracht en rechts de rode daken v
         'description' => 'Gezicht op het singelplantsoen rond het voormalige bastion Zonnenburg te Utrecht
 met links op de achtergrond een van de gebouwen van de voormalige St.-Servaasabdij, in het
 midden het Meteorologisch Instituut en rechts de Sterrenwacht.',
-        'img' => '/img/page-23.png',
+        'img' => '/img/page-23.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -278,7 +278,7 @@ midden het Meteorologisch Instituut en rechts de Sterrenwacht.',
         'title' => 'Titel 24',
         'description' => 'Gezicht op het singelplantsoen bij het Servaasbolwerkte Utrecht met rechts op de
 achtergrond een gedeelte van het St.-Magdalenaklooster.',
-        'img' => '/img/page-24.png',
+        'img' => '/img/page-24.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -289,7 +289,7 @@ achtergrond een gedeelte van het St.-Magdalenaklooster.',
         'description' => ' Gezicht op het singelplantsoen bij het Servaasbolwerk te Utrecht met het gebouw
 van het voormalige Leeuwenberchgasthuis, destijds in gebruik als chemisch laboratorium, en op
 de achtergrond de daken van de bisschoppelijke stallen op het Servaasbolwerk.',
-        'img' => '/img/page-25.png',
+        'img' => '/img/page-25.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -300,7 +300,7 @@ de achtergrond de daken van de bisschoppelijke stallen op het Servaasbolwerk.',
         'description' => 'Gezicht over de Maliebrug met het dubbele hek en het douanekantoortje (de
 Maliebarrière) te Utrecht op het singelplantsoen met geheel links een gedeelte van de
 Bruntenhof en rechts een gedeelte van het bolwerk Lepelenburg.',
-        'img' => '/img/page-26.png',
+        'img' => '/img/page-26.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -310,7 +310,7 @@ Bruntenhof en rechts een gedeelte van het bolwerk Lepelenburg.',
         'title' => 'Titel 27',
         'description' => 'Gezicht op het voormalige bolwerk Lepelenburg te Utrecht met links het huis
 Lievendaal en rechts enkele particuliere tuinhuizen.',
-        'img' => '/img/page-27.png',
+        'img' => '/img/page-27.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -321,7 +321,7 @@ Lievendaal en rechts enkele particuliere tuinhuizen.',
         'description' => ' Gezicht op het voormalige bolwerk Lepelenburg te Utrecht met een aantal
 particuliere tuinen en tuinhuizen.
 ',
-        'img' => '/img/page-28.png',
+        'img' => '/img/page-28.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -333,7 +333,7 @@ particuliere tuinen en tuinhuizen.
 Lepelenburg, waarop het witte huis links staat, met in het midden de huizen aan het begin van
 de Herenstraat en rechtsachter enkele van de kameren van Jan van der Meer aan het
 Hieronymusplantsoen',
-        'img' => '/img/page-29.png',
+        'img' => '/img/page-29.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -345,7 +345,7 @@ Hieronymusplantsoen',
 Nieuwegracht (links op de achtergrond) met de huizen aan het Hieronymusplantsoen en
 daarachter de voormalige St.-Hieronymuskapel en rechts twee boogjes, de restanten van de
 oude stadsmuur',
-        'img' => '/img/page-30.png',
+        'img' => '/img/page-30.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -357,7 +357,7 @@ oude stadsmuur',
 Nobelstraat) die aansluit op de Lucasbrug, op de voorgrond, met rechts daarvan het
 Lucasbolwerk met het Suikerhuis.
 ',
-        'img' => '/img/page-31.png',
+        'img' => '/img/page-31.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -369,7 +369,7 @@ Lucasbolwerk met het Suikerhuis.
 Lucasbolwerk met de directeurswoning van het Suikerhuis. Het Suikerhuis was een
 suikerraffinaderij die in 1721 werd begonnen. In 1860 werd deze afgebroken.
 ',
-        'img' => '/img/page-32.png',
+        'img' => '/img/page-32.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
@@ -380,7 +380,7 @@ suikerraffinaderij die in 1721 werd begonnen. In 1860 werd deze afgebroken.
         'description' => 'Gezicht op het singelplantsoen te Utrecht ten noorden van het Lucasbolwerk.
 Uiterst rechts sluit het plantsoen aan bij de Wittevrouwenbrug waarmee het panorama begint.
 Hier eindigt de tekenaar zijn rondje langs de singel.',
-        'img' => '/img/page-33.png',
+        'img' => '/img/page-33.jpg',
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ],
