@@ -16,8 +16,9 @@ function Carousel({ onPageClick, onAdditionalInfoClick, carouselRotation }) {
   const [apiData, setApiData] = useState(null);
 
   // Fetch API data once when component mounts
-  // Fetch API data once when component mounts
   const { posts } = useReadApi();
+
+  console.log(useReadApi());
 
   const validPages = useMemo(
     () => posts?.filter((page) => page && page.img) || [],

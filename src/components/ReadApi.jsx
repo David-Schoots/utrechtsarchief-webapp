@@ -6,13 +6,8 @@ const useReadApi = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const token = localStorage.getItem("token"); // Haal token uit storage
-
     fetch("http://127.0.0.1:8000/api/panorama/", {
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-      },
+      "Content-Type": "application/json",
     })
       .then((response) => {
         if (!response.ok) throw new Error("Network response was not ok");
@@ -20,10 +15,9 @@ const useReadApi = () => {
       })
       .then((data) => {
         setPosts(data.pages);
-        setLoading(false);
-        setPosts(data.pages);
       })
       .catch((err) => {
+        console.error("API Error:", err);
         setError(err.message);
         setLoading(false);
       });
