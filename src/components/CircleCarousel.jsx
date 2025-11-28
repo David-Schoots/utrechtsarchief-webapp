@@ -18,7 +18,7 @@ function Carousel({ onPageClick, onAdditionalInfoClick, carouselRotation }) {
   // Fetch API data once when component mounts
   const { posts } = useReadApi();
 
-  console.log(useReadApi());
+  // console.log(useReadApi());
 
   const validPages = useMemo(
     () => posts?.filter((page) => page && page.img) || [],
@@ -227,8 +227,8 @@ function Carousel({ onPageClick, onAdditionalInfoClick, carouselRotation }) {
         ) {
           page.additionalinformations.forEach((additionalInfo, idx) => {
             if (
-              additionalInfo.cordinate_x !== 0.03 &&
-              additionalInfo.cordinate_y !== -0.56
+              Math.abs(additionalInfo.cordinate_x - 0.03) > 0.0001 ||
+              Math.abs(additionalInfo.cordinate_y - -0.56) > 0.0001
             ) {
               // const addButtonCoords = additionalInfo.additional_info_button[0];
               const addOffsetAngle = segAngle * additionalInfo.cordinate_x;
@@ -282,14 +282,11 @@ function Carousel({ onPageClick, onAdditionalInfoClick, carouselRotation }) {
                         stroke-linejoin="round"
                       ></g>
                       <g id="SVGRepo_iconCarrier">
-                        {" "}
-                        <g id="icomoon-ignore"> </g>{" "}
+                        <g id="icomoon-ignore"></g>
                         <path
                           d="M16.001 1.072c5.291 0 9.596 4.305 9.596 9.597 0 1.683-0.446 3.341-1.29 4.799l-8.307 14.394-8.308-14.395c-0.843-1.456-1.289-3.115-1.289-4.798 0-5.292 4.305-9.597 9.597-9.597zM16.001 14.4c2.058 0 3.731-1.674 3.731-3.731s-1.674-3.731-3.731-3.731c-2.058 0-3.732 1.674-3.732 3.731s1.674 3.731 3.732 3.731zM16.001 0.006c-5.889 0-10.663 4.775-10.663 10.663 0 1.945 0.523 3.762 1.432 5.332l9.23 15.994 9.23-15.994c0.909-1.57 1.432-3.387 1.432-5.332 0-5.888-4.774-10.663-10.662-10.663v0zM16.001 13.334c-1.472 0-2.666-1.193-2.666-2.665 0-1.471 1.194-2.665 2.666-2.665s2.665 1.194 2.665 2.665c0 1.472-1.193 2.665-2.665 2.665v0z"
                           fill="#ffffff"
-                        >
-                          {" "}
-                        </path>{" "}
+                        ></path>
                       </g>
                     </svg>
                   </div>
@@ -298,7 +295,6 @@ function Carousel({ onPageClick, onAdditionalInfoClick, carouselRotation }) {
             }
           });
         }
-
         return buttons;
       })}
     </>
@@ -316,15 +312,17 @@ export default function CircleCarousel() {
 
   const [textForSpeech, setTextForSpeech] = useState(null);
   const speechSynth = window.speechSynthesis;
-    let voices = speechSynth.getVoices();
+  let voices = speechSynth.getVoices();
 
-    if(speechSynth.onvoiceschanged){
-      speechSynth.onvoiceschanged = () => {
-        voices = speechSynth.getVoices();
-        // console.log(voices);
-      };
-    }
-    const selectedVoice = voices.find(voice => voice.name === 'Google Nederlands');
+  if (speechSynth.onvoiceschanged) {
+    speechSynth.onvoiceschanged = () => {
+      voices = speechSynth.getVoices();
+      // console.log(voices);
+    };
+  }
+  const selectedVoice = voices.find(
+    (voice) => voice.name === "Google Nederlands"
+  );
 
   const handlePageClick = (page) => {
     setFullscreenPage(page);
@@ -337,12 +335,10 @@ export default function CircleCarousel() {
   };
 
   const textToSpeech = (text) => {
-    
     // const speechSynth = window.speechSynthesis;
     // let voices = speechSynth.getVoices();
     console.log(voices);
 
-    
     // setTextForSpeech(text);
 
     if (speechSynth.speaking) {
@@ -353,14 +349,13 @@ export default function CircleCarousel() {
     if (!speechSynth.speaking && text.length > 0) {
       const newUtter = new SpeechSynthesisUtterance(text);
       newUtter.voice = selectedVoice;
-      newUtter.lang = 'nl-NL';
+      newUtter.lang = "nl-NL";
       newUtter.pitch = 1;
       newUtter.rate = 0.95;
       newUtter.volume = 1;
 
       speechSynth.speak(newUtter);
     }
-    
   };
 
   useEffect(() => {
@@ -446,8 +441,72 @@ export default function CircleCarousel() {
               </button>
             </div>
 
-            <div className="fullscreen-image w-full h-9/10 bg-white/10 backdrop-blur-md border border-white/30 rounded-lg shadow-lg p-10 overflow-y-auto text-center flex flex-wrap gap-5 items-center justify-center">
-              <div className="w-3/4 h-8/10 pt-5">
+            <div className="fullscreen-image w-full h-9/10 bg-white/10 backdrop-blur-md border border-white/30 rounded-lg shadow-lg p-10 overflow-y-hidden  text-center flex flex-wrap gap-5 items-center justify-center">
+              <div className="w-full h-1/12 flex justify-start items-center flex-row">
+                <button
+                  type="button"
+                  class="text-white bg-white/10  border-2 border-white/30 focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-bold rounded-full text-sm w-10 h-10 focus:outline-none flex items-center justify-center cursor-pointer hover:scale-[1.1]"
+                  onClick={() =>
+                    textToSpeech(
+                      fullscreenPage.description +
+                        " " +
+                        fullscreenPage.additionalinformations[0].description
+                    )
+                  }
+                >
+                  <svg
+                    version="1.0"
+                    id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="20px"
+                    height="20px"
+                    viewBox="0 0 64 64"
+                    enable-background="new 0 0 64 64"
+                    xml:space="preserve"
+                    fill="#ffffff"
+                    stroke="#ffffff"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      {" "}
+                      <g>
+                        {" "}
+                        <path
+                          fill="#ffffff"
+                          d="M61,29H49c-1.657,0-3,1.344-3,3s1.343,3,3,3h12c1.657,0,3-1.344,3-3S62.657,29,61,29z"
+                        ></path>{" "}
+                        <path
+                          fill="#ffffff"
+                          d="M59.312,44.57l-11.275-4.104c-1.559-0.566-3.279,0.236-3.846,1.793c-0.566,1.555,0.235,3.277,1.793,3.844 l11.276,4.105c1.558,0.566,3.278-0.238,3.845-1.793C61.672,46.859,60.87,45.137,59.312,44.57z"
+                        ></path>{" "}
+                        <path
+                          fill="#ffffff"
+                          d="M48.036,23.531l11.276-4.104c1.557-0.566,2.359-2.289,1.793-3.843c-0.566-1.558-2.288-2.362-3.846-1.796 l-11.275,4.106c-1.559,0.566-2.36,2.289-1.794,3.846C44.757,23.295,46.479,24.098,48.036,23.531z"
+                        ></path>{" "}
+                        <path
+                          fill="#ffffff"
+                          d="M8,48c1.257,0,2.664,0,4,0V16c-1.342,0.002-2.747,0.002-4,0.002V48z"
+                        ></path>{" "}
+                        <path
+                          fill="#ffffff"
+                          d="M0,20.002V44c0,2.211,1.789,4,4,4c0,0,0.797,0,2,0V16.002c-1.204,0-2,0-2,0C1.789,16.002,0,17.791,0,20.002 z"
+                        ></path>{" "}
+                        <path
+                          fill="#ffffff"
+                          d="M37.531,0.307c-1.492-0.625-3.211-0.277-4.359,0.867L18.859,15.486c0,0-0.422,0.515-1.359,0.515 c-0.365,0-1.75,0-3.5,0v32c1.779,0,3.141,0,3.344,0c0.656,0,1.107,0.107,1.671,0.67c0.563,0.564,14.157,14.158,14.157,14.158 C33.938,63.594,34.961,64,36,64c0.516,0,1.035-0.098,1.531-0.305C39.027,63.078,40,61.617,40,60V4.002 C40,2.385,39.027,0.924,37.531,0.307z"
+                        ></path>{" "}
+                      </g>{" "}
+                    </g>
+                  </svg>
+                </button>
+              </div>
+              <div className="w-full h-11/12 pt-5">
                 <p className="text-white text-lg text-left">
                   {fullscreenPage.description || "No description available."}
                 </p>
@@ -458,8 +517,7 @@ export default function CircleCarousel() {
                       return (
                         <div key={index} className="mt-4">
                           <p className="text-white text-lg text-left">
-                            {info.description ||
-                              "No additional information available."}
+                            {info.description}
                           </p>
                         </div>
                       );
@@ -499,15 +557,6 @@ export default function CircleCarousel() {
             </div>
 
             <div className="fullscreen-image w-full h-10/12 bg-white/10 backdrop-blur-md border border-white/30 rounded-lg shadow-lg overflow-y-auto text-center flex flex-col gap-5 p-10 items-center justify-center">
-              <div className="w-full h-11/12">
-                <p
-                  id="description_text"
-                  className="text-white text-lg text-left"
-                >
-                  {fullscreenAdditionalPage.description ||
-                    "No additional information available."}
-                </p>
-              </div>
               <div className="w-full h-1/12 flex justify-start items-center flex-row">
                 <button
                   type="button"
@@ -567,6 +616,15 @@ export default function CircleCarousel() {
                     </g>
                   </svg>
                 </button>
+              </div>
+              <div className="w-full h-11/12">
+                <p
+                  id="description_text"
+                  className="text-white text-lg text-left"
+                >
+                  {fullscreenAdditionalPage.description ||
+                    "No additional information available."}
+                </p>
               </div>
             </div>
           </div>
