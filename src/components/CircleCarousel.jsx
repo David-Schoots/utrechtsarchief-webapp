@@ -303,6 +303,15 @@ export default function CircleCarousel() {
 
   const [textForSpeech, setTextForSpeech] = useState(null);
   const speechSynth = window.speechSynthesis;
+    let voices = speechSynth.getVoices();
+
+    if(speechSynth.onvoiceschanged){
+      speechSynth.onvoiceschanged = () => {
+        voices = speechSynth.getVoices();
+        // console.log(voices);
+      };
+    }
+    const selectedVoice = voices.find(voice => voice.name === 'Google Nederlands');
 
   const handlePageClick = (page) => {
     setFullscreenPage(page);
@@ -315,28 +324,29 @@ export default function CircleCarousel() {
   };
 
   const textToSpeech = (text) => {
-    setTextForSpeech(text);
-    let voices = speechSynth.getVoices();
+    
+    // const speechSynth = window.speechSynthesis;
+    // let voices = speechSynth.getVoices();
+    console.log(voices);
 
-    const selectedVoice = voices.find(voice => voice.name === 'Google Nederlands');
-
-      const newUtter =
-      new SpeechSynthesisUtterance(textForSpeech);
-      newUtter.voice = selectedVoice;
-      newUtter.lang = 'nl-NL';
-      newUtter.pitch = 1;
-      newUtter.rate = 0.95;
-      newUtter.volume = 1;
+    
+    // setTextForSpeech(text);
 
     if (speechSynth.speaking) {
       speechSynth.cancel();
       return;
     }
 
-    if (!speechSynth.speaking) {
+    if (!speechSynth.speaking && text.length > 0) {
+      const newUtter = new SpeechSynthesisUtterance(text);
+      newUtter.voice = selectedVoice;
+      newUtter.lang = 'nl-NL';
+      newUtter.pitch = 1;
+      newUtter.rate = 0.95;
+      newUtter.volume = 1;
+
       speechSynth.speak(newUtter);
     }
-
     
   };
 
