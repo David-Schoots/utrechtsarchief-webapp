@@ -17,13 +17,15 @@ function Carousel({ onPageClick, onAdditionalInfoClick, carouselRotation }) {
 
   // Fetch API data once when component mounts
   const { posts } = useReadApi();
-
+  const { posts_User } = useReadApi();
   // console.log(useReadApi());
 
   const validPages = useMemo(
     () => posts?.filter((page) => page && page.img) || [],
     [posts]
   );
+
+  console.log(posts_User);
 
   const division = useMemo(() => {
     const totalPages = validPages.length;
