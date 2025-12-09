@@ -8,7 +8,7 @@ import useReadApi from "./ReadApi";
 import { add, div } from "three/tsl";
 import "./CircleCarousel.css";
 
-function Carousel({ onPageClick, onAdditionalInfoClick, carouselRotation }) {
+function Carousel({ onPageClick, onAdditionalInfoClick, carouselRotation, pageIsOpen }) {
   const meshRef = useRef();
   const { gl, camera, raycaster, pointer } = useThree();
   const [texture, setTexture] = useState(null);
@@ -210,6 +210,7 @@ function Carousel({ onPageClick, onAdditionalInfoClick, carouselRotation }) {
             distanceFactor={1.5}
             style={{ pointerEvents: "auto" }}
           >
+            {!pageIsOpen && 
             <button
               onClick={(e) => {
                 e.stopPropagation();
@@ -218,7 +219,8 @@ function Carousel({ onPageClick, onAdditionalInfoClick, carouselRotation }) {
               className="z-50 font-semibold text-white bg-[#000000d9] border-2 border-[#ffffff33] w-[3.5vh] h-[3.5vh] flex items-center justify-center rounded-full hover:scale-110 hover:bg-[#0000001a] hover:border-[#ffffff66]"
             >
               i
-            </button>
+            </button>}
+            
           </Html>,
         ];
 
@@ -246,28 +248,29 @@ function Carousel({ onPageClick, onAdditionalInfoClick, carouselRotation }) {
                   distanceFactor={1.5}
                   style={{ pointerEvents: "auto" }}
                 >
-                  <div
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onAdditionalInfoClick(page, additionalInfo);
-                    }}
-                    className="waypoint-marker w-[2.5vh] h-[2.5vh] cursor-pointer text-justify rounded-full flex justify-center items-center bg-red-600"
-                    style={{
-                      transition: "all 0.3s ease",
-                      filter: "drop-shadow(0 0 8px rgba(255, 0, 0, 0.6))",
-                      animation: "pulse-glow 2s ease-in-out infinite",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.filter =
-                        "drop-shadow(0 0 15px rgba(255, 0, 0, 1))";
-                      e.currentTarget.style.transform = "scale(1.15)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.filter =
-                        "drop-shadow(0 0 8px rgba(255, 0, 0, 0.6))";
-                      e.currentTarget.style.transform = "scale(1)";
-                    }}
-                  >
+                  {!pageIsOpen && (
+                    <div
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onAdditionalInfoClick(page, additionalInfo);
+                      }}
+                      className="waypoint-marker w-[2.5vh] h-[2.5vh] cursor-pointer text-justify rounded-full flex justify-center items-center bg-red-600"
+                      style={{
+                        transition: "all 0.3s ease",
+                        filter: "drop-shadow(0 0 8px rgba(255, 0, 0, 0.6))",
+                        animation: "pulse-glow 2s ease-in-out infinite",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.filter =
+                          "drop-shadow(0 0 15px rgba(255, 0, 0, 1))";
+                        e.currentTarget.style.transform = "scale(1.15)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.filter =
+                          "drop-shadow(0 0 8px rgba(255, 0, 0, 0.6))";
+                        e.currentTarget.style.transform = "scale(1)";
+                      }}
+                    >
                     <svg
                       viewBox="-8 -8 48.00 48.00"
                       version="1.1"
@@ -291,7 +294,8 @@ function Carousel({ onPageClick, onAdditionalInfoClick, carouselRotation }) {
                         ></path>
                       </g>
                     </svg>
-                  </div>
+                    </div>
+                  )}
                 </Html>
               );
             }
@@ -306,9 +310,11 @@ function Carousel({ onPageClick, onAdditionalInfoClick, carouselRotation }) {
 export default function CircleCarousel() {
   const [carouselRotation, setCarouselRotation] = useState(0);
   const [fullscreenPage, setFullscreenPage] = useState(null);
-  const [fullscreenAdditionalPage, setFullscreenAdditionalPage] =
-    useState(null);
+  const [pageIsOpen, setPageIsOpen] = useState(false);
+  const [fullscreenAdditionalPage, setFullscreenAdditionalPage] = useState(null);
   const [isRotating, setIsRotating] = useState(false);
+  const [awayFromCarousel, setAwayFromCarousel] = useState(Date.now());
+   
   const controlsRef = useRef();
   const targetRotationRef = useRef(null);
 
@@ -319,7 +325,6 @@ export default function CircleCarousel() {
   if (speechSynth.onvoiceschanged) {
     speechSynth.onvoiceschanged = () => {
       voices = speechSynth.getVoices();
-      // console.log(voices);
     };
   }
   const selectedVoice = voices.find(
@@ -328,12 +333,12 @@ export default function CircleCarousel() {
 
   const handlePageClick = (page) => {
     setFullscreenPage(page);
-    console.log("Page clicked:", page);
+    setPageIsOpen(true);
   };
 
   const handleAdditionalInfoClick = (page, additionalInfo) => {
-    console.log("Additional info clicked:", additionalInfo);
     setFullscreenAdditionalPage(additionalInfo);
+    setPageIsOpen(true);
   };
 
   const textToSpeech = (text) => {
@@ -417,10 +422,13 @@ export default function CircleCarousel() {
           onPageClick={handlePageClick}
           onAdditionalInfoClick={handleAdditionalInfoClick}
           carouselRotation={carouselRotation}
+          pageIsOpen={pageIsOpen}
         />
         <OrbitControls
           ref={controlsRef}
           enableDamping
+          autoRotate={isRotating}
+          autoRotateSpeed={-0.08}
           enableZoom={false}
           enablePan={false}
           minPolarAngle={1.52}
@@ -437,7 +445,10 @@ export default function CircleCarousel() {
               <button
                 type="button"
                 class="close-button text-white bg-white/10  border-2 border-white/30 focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-bold rounded-full text-sm w-12 h-12 focus:outline-none"
-                onClick={() => setFullscreenPage(null)}
+                onClick={() => {
+                  setFullscreenPage(null);
+                  setPageIsOpen(false);
+                }}
               >
                 X
               </button>
@@ -552,7 +563,10 @@ export default function CircleCarousel() {
               <button
                 type="button"
                 class="close-button text-white bg-white/10  border-2 border-white/30 focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-bold rounded-full text-sm w-12 h-12 focus:outline-none"
-                onClick={() => setFullscreenAdditionalPage(null)}
+                onClick={() => {
+                  setFullscreenAdditionalPage(null);
+                  setPageIsOpen(false);
+                }}
               >
                 X
               </button>
